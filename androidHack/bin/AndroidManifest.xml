@@ -5,8 +5,13 @@
     android:versionName="1.0" >
 
     <uses-sdk
+<<<<<<< HEAD
         android:minSdkVersion="19"
         android:targetSdkVersion="19" />
+=======
+        android:minSdkVersion="8"
+        android:targetSdkVersion="16" />
+>>>>>>> FETCH_HEAD
 
     <application
         android:allowBackup="true"

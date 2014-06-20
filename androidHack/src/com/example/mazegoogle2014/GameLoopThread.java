@@ -1,5 +1,6 @@
 package com.example.mazegoogle2014;
 
+import android.annotation.SuppressLint;
 import android.graphics.Canvas;
 public class GameLoopThread extends Thread {
     static final long FPS = 10;
@@ -14,7 +15,8 @@ public class GameLoopThread extends Thread {
           running = run;
     }
 
-    @Override
+    @SuppressLint("WrongCall")
+	@Override
     public void run() {
           long ticksPS = 1000 / FPS;
           long startTime;

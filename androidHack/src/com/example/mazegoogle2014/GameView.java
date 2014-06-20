@@ -55,6 +55,6 @@ public class GameView extends SurfaceView {
           if (x < getWidth() - bmp.getWidth()) {
                  x++;
           }
-          canvas.drawBitmap(bmp, x, 10, null);
+          canvas.drawBitmap(bmp, 10, 10, null);
     }
 }
