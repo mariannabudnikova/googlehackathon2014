@@ -15,6 +15,7 @@ public class GameView extends SurfaceView {
     private SurfaceHolder holder;
     private GameLoopThread gameLoopThread;
     private int x = 0; 
+    Alien alien;
    
     public GameView(Context context) {
           super(context);
@@ -46,7 +47,8 @@ public class GameView extends SurfaceView {
                                int width, int height) {
                  }
           });
-          bmp = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
+          alien = Alien.get();
+          bmp = BitmapFactory.decodeResource(getResources(), alien.getIcon());
     }
 
     @Override
@@ -55,6 +57,7 @@ public class GameView extends SurfaceView {
           if (x < getWidth() - bmp.getWidth()) {
                  x++;
           }
-          canvas.drawBitmap(bmp, 10, 10, null);
+          
+          canvas.drawBitmap(bmp, alien.xPosition, alien.yPosition, null);
     }
 }
